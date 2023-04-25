@@ -21,5 +21,5 @@ class ColorConstants {
   static const Color lightGreenFaded = Color(0xff3CB371); //Secondary -light
   static const Color verydarkGreen = Color(0xff0F2D21); //Primary-dark
   static const Color mediumGray = Color(0xff292929); //BG -dark
-  static const Color darkGren = Color(0xff008000); //Secondary-dark
+  static const Color darkGreen = Color(0xff008000); //Secondary-dark
 }

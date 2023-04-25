@@ -1,32 +1,66 @@
 class PlacesModel {
+  PlacesModel({
+    this.total,
+    this.limit,
+    this.start,
+    this.data,
+  });
+
   String? total;
   String? limit;
   String? start;
-  List<Data>? data;
+  List<Datum>? data;
 
-  PlacesModel({this.total, this.limit, this.start, this.data});
-
-  PlacesModel.fromJson(Map<String, dynamic> json) {
-    total = json['total'];
-    limit = json['limit'];
-    start = json['start'];
-    if (json['data'] != null) {
-      data = <Data>[];
-      json['data'].forEach((v) {
-        data!.add(Data.fromJson(v));
-      });
-    }
-  }
+  factory PlacesModel.fromJson(Map<String, dynamic> json) => PlacesModel(
+        total: json["total"],
+        limit: json["limit"],
+        start: json["start"],
+        data: json["data"] == null
+            ? []
+            : List<Datum>.from(json["data"]!.map((x) => Datum.fromJson(x))),
+      );
 }
 
-class Data {
+class Datum {
+  Datum({
+    this.id,
+    this.url,
+    this.title,
+    this.listingDescription,
+    this.images,
+    this.relatedParks,
+    this.relatedOrganizations,
+    this.tags,
+    this.latitude,
+    this.longitude,
+    this.latLong,
+    this.bodyText,
+    this.audioDescription,
+    this.isPassportStampLocation,
+    this.passportStampLocationDescription,
+    this.passportStampImages,
+    this.managedByUrl,
+    this.isOpenToPublic,
+    this.isMapPinHidden,
+    this.npmapId,
+    this.geometryPoiId,
+    this.isManagedByNps,
+    this.amenities,
+    this.managedByOrg,
+    this.quickFacts,
+    this.location,
+    this.locationDescription,
+    this.credit,
+    this.multimedia,
+  });
+
   String? id;
   String? url;
   String? title;
   String? listingDescription;
-  List<Images>? images;
-  List<RelatedParks>? relatedParks;
-  List<void>? relatedOrganizations;
+  List<Image>? images;
+  List<RelatedPark>? relatedParks;
+  List<dynamic>? relatedOrganizations;
   List<String>? tags;
   String? latitude;
   String? longitude;
@@ -35,171 +69,194 @@ class Data {
   String? audioDescription;
   String? isPassportStampLocation;
   String? passportStampLocationDescription;
-  List<void>? passportStampImages;
+  List<dynamic>? passportStampImages;
   String? managedByUrl;
   String? isOpenToPublic;
   String? isMapPinHidden;
   String? npmapId;
   String? geometryPoiId;
   String? isManagedByNps;
-  List<void>? amenities;
+  List<String>? amenities;
   String? managedByOrg;
-  List<QuickFacts>? quickFacts;
+  List<QuickFact>? quickFacts;
   String? location;
   String? locationDescription;
   String? credit;
-  List<void>? multimedia;
+  List<Multimedia>? multimedia;
 
-  Data(
-      {this.id,
-      this.url,
-      this.title,
-      this.listingDescription,
-      this.images,
-      this.relatedParks,
-      this.relatedOrganizations,
-      this.tags,
-      this.latitude,
-      this.longitude,
-      this.latLong,
-      this.bodyText,
-      this.audioDescription,
-      this.isPassportStampLocation,
-      this.passportStampLocationDescription,
-      this.passportStampImages,
-      this.managedByUrl,
-      this.isOpenToPublic,
-      this.isMapPinHidden,
-      this.npmapId,
-      this.geometryPoiId,
-      this.isManagedByNps,
-      this.amenities,
-      this.managedByOrg,
-      this.quickFacts,
-      this.location,
-      this.locationDescription,
-      this.credit,
-      this.multimedia});
-
-  Data.fromJson(Map<String, dynamic> json) {
-    id = json['id'];
-    url = json['url'];
-    title = json['title'];
-    listingDescription = json['listingDescription'];
-    if (json['images'] != null) {
-      images = <Images>[];
-      json['images'].forEach((v) {
-        images!.add(Images.fromJson(v));
-      });
-    }
-    if (json['relatedParks'] != null) {
-      relatedParks = <RelatedParks>[];
-      json['relatedParks'].forEach((v) {
-        relatedParks!.add(RelatedParks.fromJson(v));
-      });
-    }
-
-    //-------NULL FROM API
-    // if (json['relatedOrganizations'] != null) {
-    //   relatedOrganizations = <Null>[];
-    //   json['relatedOrganizations'].forEach((v) {
-    //     relatedOrganizations!.add(Null.fromJson(v));
-    //   });
-    // }
-    tags = json['tags'].cast<String>();
-    latitude = json['latitude'];
-    longitude = json['longitude'];
-    latLong = json['latLong'];
-    bodyText = json['bodyText'];
-    audioDescription = json['audioDescription'];
-    isPassportStampLocation = json['isPassportStampLocation'];
-    passportStampLocationDescription = json['passportStampLocationDescription'];
-
-    //------NULL FROM API
-    // if (json['passportStampImages'] != null) {
-    //   passportStampImages = <Null>[];
-    //   json['passportStampImages'].forEach((v) {
-    //     passportStampImages!.add(Null.fromJson(v));
-    //   });
-    // }
-    managedByUrl = json['managedByUrl'];
-    isOpenToPublic = json['isOpenToPublic'];
-    isMapPinHidden = json['isMapPinHidden'];
-    npmapId = json['npmapId'];
-    geometryPoiId = json['geometryPoiId'];
-    isManagedByNps = json['isManagedByNps'];
-    // if (json['amenities'] != null) {
-    //   amenities = <Null>[];
-    //   json['amenities'].forEach((v) {
-    //     amenities!.add(Null.fromJson(v));
-    //   });
-    // }
-    managedByOrg = json['managedByOrg'];
-    if (json['quickFacts'] != null) {
-      quickFacts = <QuickFacts>[];
-      json['quickFacts'].forEach((v) {
-        quickFacts!.add(QuickFacts.fromJson(v));
-      });
-    }
-    location = json['location'];
-    locationDescription = json['locationDescription'];
-    credit = json['credit'];
-    // if (json['multimedia'] != null) {
-    //   multimedia = <Null>[];
-    //   json['multimedia'].forEach((v) {
-    //     multimedia!.add(Null.fromJson(v));
-    //   });
-    // }
-  }
+  factory Datum.fromJson(Map<String, dynamic> json) => Datum(
+        id: json["id"],
+        url: json["url"],
+        title: json["title"],
+        listingDescription: json["listingDescription"],
+        images: json["images"] == null
+            ? []
+            : List<Image>.from(json["images"]!.map((x) => Image.fromJson(x))),
+        relatedParks: json["relatedParks"] == null
+            ? []
+            : List<RelatedPark>.from(
+                json["relatedParks"]!.map((x) => RelatedPark.fromJson(x))),
+        relatedOrganizations: json["relatedOrganizations"] == null
+            ? []
+            : List<dynamic>.from(json["relatedOrganizations"]!.map((x) => x)),
+        tags: json["tags"] == null
+            ? []
+            : List<String>.from(json["tags"]!.map((x) => x)),
+        latitude: json["latitude"],
+        longitude: json["longitude"],
+        latLong: json["latLong"],
+        bodyText: json["bodyText"],
+        audioDescription: json["audioDescription"],
+        isPassportStampLocation: json["isPassportStampLocation"],
+        passportStampLocationDescription:
+            json["passportStampLocationDescription"],
+        passportStampImages: json["passportStampImages"] == null
+            ? []
+            : List<dynamic>.from(json["passportStampImages"]!.map((x) => x)),
+        managedByUrl: json["managedByUrl"],
+        isOpenToPublic: json["isOpenToPublic"],
+        isMapPinHidden: json["isMapPinHidden"],
+        npmapId: json["npmapId"],
+        geometryPoiId: json["geometryPoiId"],
+        isManagedByNps: json["isManagedByNps"],
+        amenities: json["amenities"] == null
+            ? []
+            : List<String>.from(json["amenities"]!.map((x) => x)),
+        managedByOrg: json["managedByOrg"],
+        quickFacts: json["quickFacts"] == null
+            ? []
+            : List<QuickFact>.from(
+                json["quickFacts"]!.map((x) => QuickFact.fromJson(x))),
+        location: json["location"],
+        locationDescription: json["locationDescription"],
+        credit: json["credit"],
+        multimedia: json["multimedia"] == null
+            ? []
+            : List<Multimedia>.from(
+                json["multimedia"]!.map((x) => Multimedia.fromJson(x))),
+      );
 }
 
-class Images {
+class Image {
+  Image({
+    this.url,
+    this.credit,
+    this.altText,
+    this.title,
+    this.description,
+    this.caption,
+    this.crops,
+  });
+
   String? url;
   String? credit;
   String? altText;
   String? title;
   String? description;
   String? caption;
-  List<Crops>? crops;
+  List<Crop>? crops;
 
-  Images(
-      {this.url,
-      this.credit,
-      this.altText,
-      this.title,
-      this.description,
-      this.caption,
-      this.crops});
+  factory Image.fromJson(Map<String, dynamic> json) => Image(
+        url: json["url"],
+        credit: json["credit"],
+        altText: json["altText"],
+        title: json["title"],
+        description: json["description"],
+        caption: json["caption"],
+        crops: json["crops"] == null
+            ? []
+            : List<Crop>.from(json["crops"]!.map((x) => Crop.fromJson(x))),
+      );
 
-  Images.fromJson(Map<String, dynamic> json) {
-    url = json['url'];
-    credit = json['credit'];
-    altText = json['altText'];
-    title = json['title'];
-    description = json['description'];
-    caption = json['caption'];
-    if (json['crops'] != null) {
-      crops = <Crops>[];
-      json['crops'].forEach((v) {
-        crops!.add(Crops.fromJson(v));
-      });
-    }
-  }
+  Map<String, dynamic> toJson() => {
+        "url": url,
+        "credit": credit,
+        "altText": altText,
+        "title": title,
+        "description": description,
+        "caption": caption,
+        "crops": crops == null
+            ? []
+            : List<dynamic>.from(crops!.map((x) => x.toJson())),
+      };
 }
 
-class Crops {
+class Crop {
+  Crop({
+    this.aspectRatio,
+    this.url,
+  });
+
   String? aspectRatio;
   String? url;
 
-  Crops({this.aspectRatio, this.url});
+  factory Crop.fromJson(Map<String, dynamic> json) => Crop(
+        aspectRatio: json["aspectRatio"],
+        url: json["url"],
+      );
 
-  Crops.fromJson(Map<String, dynamic> json) {
-    aspectRatio = json['aspectRatio'];
-    url = json['url'];
-  }
+  Map<String, dynamic> toJson() => {
+        "aspectRatio": aspectRatio,
+        "url": url,
+      };
 }
 
-class RelatedParks {
+class Multimedia {
+  Multimedia({
+    this.title,
+    this.id,
+    this.type,
+    this.url,
+  });
+
+  String? title;
+  String? id;
+  String? type;
+  String? url;
+
+  factory Multimedia.fromJson(Map<String, dynamic> json) => Multimedia(
+        title: json["title"],
+        id: json["id"],
+        type: json["type"],
+        url: json["url"],
+      );
+
+  Map<String, dynamic> toJson() => {
+        "title": title,
+        "id": id,
+        "type": type,
+        "url": url,
+      };
+}
+
+class QuickFact {
+  QuickFact({
+    this.id,
+    this.value,
+    this.name,
+  });
+
+  String? id;
+  String? value;
+  String? name;
+
+  factory QuickFact.fromJson(Map<String, dynamic> json) => QuickFact(
+        id: json["id"],
+        value: json["value"],
+        name: json["name"],
+      );
+}
+
+class RelatedPark {
+  RelatedPark({
+    this.states,
+    this.parkCode,
+    this.designation,
+    this.fullName,
+    this.url,
+    this.name,
+  });
+
   String? states;
   String? parkCode;
   String? designation;
@@ -207,34 +264,12 @@ class RelatedParks {
   String? url;
   String? name;
 
-  RelatedParks(
-      {this.states,
-      this.parkCode,
-      this.designation,
-      this.fullName,
-      this.url,
-      this.name});
-
-  RelatedParks.fromJson(Map<String, dynamic> json) {
-    states = json['states'];
-    parkCode = json['parkCode'];
-    designation = json['designation'];
-    fullName = json['fullName'];
-    url = json['url'];
-    name = json['name'];
-  }
-}
-
-class QuickFacts {
-  String? id;
-  String? value;
-  String? name;
-
-  QuickFacts({this.id, this.value, this.name});
-
-  QuickFacts.fromJson(Map<String, dynamic> json) {
-    id = json['id'];
-    value = json['value'];
-    name = json['name'];
-  }
+  factory RelatedPark.fromJson(Map<String, dynamic> json) => RelatedPark(
+        states: json["states"],
+        parkCode: json["parkCode"],
+        designation: json["designation"],
+        fullName: json["fullName"],
+        url: json["url"],
+        name: json["name"],
+      );
 }
