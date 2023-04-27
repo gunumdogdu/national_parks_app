@@ -58,7 +58,7 @@ class Datum {
   String? url;
   String? title;
   String? listingDescription;
-  List<Image>? images;
+  List<Images>? images;
   List<RelatedPark>? relatedParks;
   List<dynamic>? relatedOrganizations;
   List<String>? tags;
@@ -91,7 +91,7 @@ class Datum {
         listingDescription: json["listingDescription"],
         images: json["images"] == null
             ? []
-            : List<Image>.from(json["images"]!.map((x) => Image.fromJson(x))),
+            : List<Images>.from(json["images"]!.map((x) => Images.fromJson(x))),
         relatedParks: json["relatedParks"] == null
             ? []
             : List<RelatedPark>.from(
@@ -137,8 +137,8 @@ class Datum {
       );
 }
 
-class Image {
-  Image({
+class Images {
+  Images({
     this.url,
     this.credit,
     this.altText,
@@ -156,7 +156,7 @@ class Image {
   String? caption;
   List<Crop>? crops;
 
-  factory Image.fromJson(Map<String, dynamic> json) => Image(
+  factory Images.fromJson(Map<String, dynamic> json) => Images(
         url: json["url"],
         credit: json["credit"],
         altText: json["altText"],

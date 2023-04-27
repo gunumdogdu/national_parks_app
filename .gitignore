@@ -25,19 +25,18 @@ secrets/API.DART
 
 # Flutter/Dart/Pub related
 **/doc/api/
-**/secrets/
-**/secrets/API.DART
+
 **/ios/Flutter/.last_build_id
 .dart_tool/
 .flutter-plugins
 .flutter-plugins-dependencies
 .packages
 .pub-cache/
+lib/secrets/secrets.dart
+secrets/secrets.dart
+secrets/
 .pub/
 /build/
-secrets/
-secrets/API.DART
-/secrets/API.DART
 
 # Symbolication related
 app.*.symbols
