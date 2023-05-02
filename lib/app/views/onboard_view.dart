@@ -5,8 +5,10 @@ import 'package:national_parks_app/app/constants/locales/string_constants.dart';
 import 'package:national_parks_app/app/constants/themes/color_constants.dart';
 import 'package:national_parks_app/app/utils/customvars.dart';
 import 'package:national_parks_app/app/utils/paddings.dart';
-import 'package:national_parks_app/app/utils/strings.dart';
+
 import 'package:national_parks_app/app/views/dummy.dart';
+
+import '../utils/asset_paths.dart';
 
 class OnboardingView extends StatelessWidget {
   const OnboardingView({super.key});
@@ -30,7 +32,7 @@ class OnboardingView extends StatelessWidget {
                 flex: CustomVars.flexOne,
               ),
               Image.asset(
-                CustomStrings.yellowStoneLogo,
+                AssetPaths.yellowStoneLogo,
                 fit: BoxFit.fitWidth,
               ),
               const SizedBox(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:national_parks_app/app/utils/strings.dart';
+import 'package:national_parks_app/app/utils/asset_paths.dart';
 
 class CustomLoading extends StatelessWidget {
   const CustomLoading({
@@ -10,7 +10,7 @@ class CustomLoading extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Image.asset(
-        CustomStrings.loadingGif,
+        AssetPaths.loadingGif,
         height: double.infinity,
         fit: BoxFit.fitHeight,
         scale: 0.8,

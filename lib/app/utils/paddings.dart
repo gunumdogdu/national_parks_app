@@ -4,4 +4,5 @@ class CustomPaddings {
   static const paddingMedHor = 24.0;
   static const paddingSmallHor = 16.0;
   static const paddingXSmallHor = 8.0;
+  static const paddingXSmall = 8.0;
 }
