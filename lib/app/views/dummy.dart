@@ -3,6 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:national_parks_app/app/constants/locales/string_constants.dart';
 import 'package:national_parks_app/app/constants/themes/color_constants.dart';
+import 'package:national_parks_app/app/utils/customvars.dart';
+import 'package:national_parks_app/app/utils/paddings.dart';
 import 'package:national_parks_app/app/utils/strings.dart';
 
 import 'package:national_parks_app/repositories/services/places_service.dart';
@@ -57,7 +59,7 @@ class DummyView1 extends StatelessWidget {
                             assetPath: 'assets/png/galleryitem.jpg',
                             onTap: () {},
                             title: 'emir'),
-                        SizedBox(
+                        const SizedBox(
                           width: 12,
                         ),
                         CustomGridItem(
@@ -93,14 +95,15 @@ class CustomGridItem extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: ClipRRect(
-        borderRadius: const BorderRadius.all(Radius.circular(24.0)),
+        borderRadius:
+            const BorderRadius.all(Radius.circular(CustomVars.cardRadius24)),
         child: Card(
           shadowColor: Colors.black,
           color: ColorConstants.verydarkGreen,
           elevation: 5,
           clipBehavior: Clip.hardEdge,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(24.0),
+            borderRadius: BorderRadius.circular(CustomVars.cardRadius24),
           ),
           child: Stack(
             children: [
@@ -134,11 +137,13 @@ class CustomGridItem extends StatelessWidget {
                   ),
                 ),
                 child: Padding(
-                  padding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+                  padding: const EdgeInsets.symmetric(
+                      vertical: CustomPaddings.paddingSmallVer,
+                      horizontal: CustomPaddings.paddingSmallHor),
                   child: Text(
                     title,
-                    style: TextStyle(
-                      color: Colors.white,
+                    style: const TextStyle(
+                      color: ColorConstants.lightGray,
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
                       shadows: [
