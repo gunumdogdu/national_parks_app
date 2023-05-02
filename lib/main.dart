@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:national_parks_app/app/views/dummy.dart';
 
+import 'app/views/onboard_view.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: DummyView1(),
+      home: OnboardingView(),
       themeMode: ThemeMode.dark,
     );
   }
