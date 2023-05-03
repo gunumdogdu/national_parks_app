@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:national_parks_app/app/views/dummy.dart';
+import 'package:national_parks_app/app/constants/themes/text_styles.dart';
+import 'package:national_parks_app/app/views/home_view.dart';
 
 import 'app/views/onboard_view.dart';
 
@@ -16,11 +17,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: LightTheme.data,
       home: OnboardingView(),
-      themeMode: ThemeMode.dark,
     );
   }
 }
