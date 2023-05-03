@@ -23,7 +23,7 @@ class PlacesServiceController extends GetxController {
       placesItems.value = PlacesModel.fromJson(datas);
       alertsItems.value = AlertsModel.fromJson(alertsData);
       // print(response);
-      print(alertsResponse);
+      // print(alertsResponse);
       isLoading.value = false;
     }
   }

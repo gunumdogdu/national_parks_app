@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:national_parks_app/app/constants/themes/text_styles.dart';
-import 'package:national_parks_app/app/views/home_view.dart';
 
+import 'package:timezone/data/latest.dart' as tz;
 import 'app/views/onboard_view.dart';
 
 void main() {
+  tz.initializeTimeZones();
   runApp(const MyApp());
 }
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: LightTheme.data,
-      home: OnboardingView(),
+      home: const OnboardingView(),
     );
   }
 }

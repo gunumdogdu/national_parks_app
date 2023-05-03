@@ -7,6 +7,7 @@ import 'package:national_parks_app/app/constants/themes/color_constants.dart';
 import 'package:national_parks_app/app/controllers/bottom_navigation_controller.dart';
 import 'package:national_parks_app/app/utils/asset_paths.dart';
 import 'package:national_parks_app/app/utils/paddings.dart';
+import 'package:national_parks_app/app/views/visitor_center_view.dart';
 
 import 'package:national_parks_app/repositories/services/places_service.dart';
 
@@ -113,7 +114,10 @@ class HomeView extends StatelessWidget {
                             children: [
                               CustomGridItem(
                                 assetPath: 'assets/png/galleryitem.jpg',
-                                onTap: () {},
+                                onTap: () {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (ctx) => VisitorCenterView()));
+                                },
                                 title: 'VISITOR CENTERS',
                               ),
                               const SizedBox(
