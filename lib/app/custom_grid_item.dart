@@ -67,9 +67,10 @@ class CustomGridItem extends StatelessWidget {
                       horizontal: CustomPaddings.paddingSmallHor),
                   child: Text(
                     title,
+                    maxLines: 2,
                     style: const TextStyle(
                       color: ColorConstants.lightGray,
-                      fontSize: CustomVars.fontSize24,
+                      fontSize: CustomVars.fontSize20,
                       fontWeight: FontWeight.bold,
                       shadows: [
                         Shadow(

@@ -6,4 +6,5 @@ class CustomText {
   static const errorFetch = 'Error fetching data';
   static const alertsTitle = 'Alerts';
   static const alertsSubtitle = 'Parks Closure';
+  static const visitorCenterTitle = 'Visitor Centers';
 }

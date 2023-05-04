@@ -12,8 +12,7 @@ class CustomLoading extends StatelessWidget {
       body: Image.asset(
         AssetPaths.loadingGif,
         height: double.infinity,
-        fit: BoxFit.fitHeight,
-        scale: 0.8,
+        fit: BoxFit.cover,
       ),
     );
   }

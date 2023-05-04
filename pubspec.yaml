@@ -69,9 +69,14 @@ flutter:
   assets:
     - assets/png/yellowstonelogo.png
     - assets/gif/bisonloading.gif
+    - assets/gif/wolfloading.gif
+    - assets/gif/wolfloading1.gif
+    - assets/gif/bgloading.gif
+    - assets/gif/bisonloading.mp4
     - assets/png/entranceitemimage.png
     - assets/png/galleryitem.jpg
     - assets/png/activitiesimage.jpg
+    - assets/png/visitorcenter.jpg
     
 
   # An image asset can refer to one or more resolution-specific "variants", see

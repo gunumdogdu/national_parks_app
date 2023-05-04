@@ -113,7 +113,7 @@ class HomeView extends StatelessWidget {
                           child: Row(
                             children: [
                               CustomGridItem(
-                                assetPath: 'assets/png/galleryitem.jpg',
+                                assetPath: AssetPaths.visitorCenterImage,
                                 onTap: () {
                                   Navigator.of(context).push(MaterialPageRoute(
                                       builder: (ctx) => VisitorCenterView()));

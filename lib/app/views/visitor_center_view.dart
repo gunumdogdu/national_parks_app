@@ -1,7 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 import 'package:get/get.dart';
+import 'package:national_parks_app/app/constants/locales/string_constants.dart';
 import 'package:national_parks_app/app/constants/themes/color_constants.dart';
+import 'package:national_parks_app/app/views/home_view.dart';
+import 'package:national_parks_app/app/views/visitor_center_detail_view.dart';
 import 'package:national_parks_app/repositories/services/visitor_center_service.dart';
 import 'package:timezone/timezone.dart' as tz;
 
@@ -27,6 +31,23 @@ class VisitorCenterView extends StatelessWidget {
           final visitorItems = controller.visitorCenterItems.value;
 
           return Scaffold(
+            extendBodyBehindAppBar: true,
+            appBar: AppBar(
+              title: const Text(
+                CustomText.visitorCenterTitle,
+                style: TextStyle(color: ColorConstants.lightGray),
+              ),
+              backgroundColor: ColorConstants.verydarkGreen,
+              leading: IconButton(
+                  onPressed: () {
+                    Navigator.of(context)
+                        .pop(MaterialPageRoute(builder: (ctx) => HomeView()));
+                  },
+                  icon: const Icon(
+                    CupertinoIcons.chevron_back,
+                    color: ColorConstants.lightGray,
+                  )),
+            ),
             body: ListView.builder(
               itemCount: visitorItems!.data.length,
               itemBuilder: (BuildContext context, int index) {
@@ -44,6 +65,11 @@ class VisitorCenterView extends StatelessWidget {
                     SizedBox(
                       height: 66,
                       child: ListTile(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => VisitorCenterDetailView(
+                                  index: index, visitorItems: visitorItems)));
+                        },
                         minVerticalPadding: 0,
                         minLeadingWidth: 0,
                         contentPadding: EdgeInsets.zero,
@@ -57,7 +83,7 @@ class VisitorCenterView extends StatelessWidget {
                           overflow: TextOverflow.ellipsis,
                         ),
                         subtitle: Text(
-                          '$status',
+                          status,
                           style: TextStyle(
                             color: statusColor,
                           ),
