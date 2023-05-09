@@ -2,14 +2,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:national_parks_app/app/constants/locales/string_constants.dart';
-import 'package:national_parks_app/app/constants/themes/color_constants.dart';
+import 'package:national_parks_app/src/locales/string_constants.dart';
+import 'package:national_parks_app/src/utils/themes/color_constants.dart';
 import 'package:national_parks_app/app/views/home_view.dart';
 import 'package:national_parks_app/app/views/visitor_center_detail_view.dart';
 import 'package:national_parks_app/repositories/services/visitor_center_service.dart';
 import 'package:timezone/timezone.dart' as tz;
 
-import '../customloading.dart';
+import '../../src/widgets/customloading.dart';
 
 class VisitorCenterView extends StatelessWidget {
   VisitorCenterView({super.key});

@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'package:national_parks_app/app/constants/locales/string_constants.dart';
-import 'package:national_parks_app/app/constants/themes/color_constants.dart';
-import 'package:national_parks_app/app/utils/customvars.dart';
-import 'package:national_parks_app/app/utils/paddings.dart';
+import 'package:national_parks_app/src/locales/string_constants.dart';
 
-import 'package:national_parks_app/app/views/home_view.dart';
+import 'package:national_parks_app/src/utils/customvars.dart';
+import 'package:national_parks_app/src/utils/paddings.dart';
 
-import '../custom_main_button.dart';
-import '../utils/asset_paths.dart';
+import '../../src/utils/asset_paths.dart';
+import '../../src/widgets/custom_main_button.dart';
+import 'home_view.dart';
 
 class OnboardingView extends StatelessWidget {
   const OnboardingView({super.key});
@@ -53,7 +52,16 @@ class OnboardingView extends StatelessWidget {
               const Spacer(
                 flex: CustomVars.flexThree,
               ),
-              const CustomMainButton()
+              CustomMainButton(
+                onPress: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => HomeView(),
+                    ),
+                  );
+                },
+                text: CustomText.displayButtonText,
+              )
             ],
           ),
         ),

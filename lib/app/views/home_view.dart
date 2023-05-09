@@ -2,18 +2,18 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:national_parks_app/app/constants/locales/string_constants.dart';
-import 'package:national_parks_app/app/constants/themes/color_constants.dart';
+import 'package:national_parks_app/src/locales/string_constants.dart';
+import 'package:national_parks_app/src/utils/themes/color_constants.dart';
 import 'package:national_parks_app/app/controllers/bottom_navigation_controller.dart';
-import 'package:national_parks_app/app/utils/asset_paths.dart';
-import 'package:national_parks_app/app/utils/paddings.dart';
+import 'package:national_parks_app/src/utils/asset_paths.dart';
+import 'package:national_parks_app/src/utils/paddings.dart';
 import 'package:national_parks_app/app/views/visitor_center_view.dart';
 
 import 'package:national_parks_app/repositories/services/places_service.dart';
 
-import '../custom_grid_item.dart';
-import '../customloading.dart';
-import '../modal_bottom_sheet_alerts.dart';
+import '../../src/widgets/custom_grid_item.dart';
+import '../../src/widgets/customloading.dart';
+import '../../src/widgets/modal_bottom_sheet_alerts.dart';
 
 class HomeView extends StatelessWidget {
   final controller = Get.put(PlacesServiceController());
