@@ -6,4 +6,5 @@ class AssetPaths {
   static const activitiesImage = 'assets/png/activitiesimage.jpg';
   static const visitorCenterImage = 'assets/png/visitorcenter.jpg';
   static const welcomePageImage = 'assets/png/welcome-page.jpg';
+  static const googleLogoImage = 'assets/png/google-logo.png';
 }

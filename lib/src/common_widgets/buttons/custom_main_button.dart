@@ -1,10 +1,11 @@
+
 import 'package:flutter/material.dart';
 import 'package:national_parks_app/src/utils/customvars.dart';
 import 'package:national_parks_app/src/utils/paddings.dart';
 import 'package:national_parks_app/app/views/home_view.dart';
 
-import '../locales/string_constants.dart';
-import '../utils/themes/color_constants.dart';
+import '../../locales/string_constants.dart';
+import '../../utils/themes/color_constants.dart';
 
 class CustomMainButton extends StatelessWidget {
   const CustomMainButton({

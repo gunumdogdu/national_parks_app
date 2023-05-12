@@ -9,7 +9,7 @@ import 'package:national_parks_app/app/views/visitor_center_detail_view.dart';
 import 'package:national_parks_app/repositories/services/visitor_center_service.dart';
 import 'package:timezone/timezone.dart' as tz;
 
-import '../../src/widgets/customloading.dart';
+import '../../src/common_widgets/customloading.dart';
 
 class VisitorCenterView extends StatelessWidget {
   VisitorCenterView({super.key});

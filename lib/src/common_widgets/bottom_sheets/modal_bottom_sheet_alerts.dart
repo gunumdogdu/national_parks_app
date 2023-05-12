@@ -1,11 +1,12 @@
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:national_parks_app/src/locales/string_constants.dart';
 import 'package:national_parks_app/src/utils/customvars.dart';
 import 'package:national_parks_app/src/utils/paddings.dart';
 
-import '../../models/places/alerts_model.dart';
-import '../utils/themes/color_constants.dart';
+import '../../../models/places/alerts_model.dart';
+import '../../utils/themes/color_constants.dart';
 
 class ModalBottomSheetAlerts extends StatelessWidget {
   const ModalBottomSheetAlerts({

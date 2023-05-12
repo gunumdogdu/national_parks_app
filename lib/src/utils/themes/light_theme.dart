@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:national_parks_app/src/utils/themes/widget_themes/text_field_theme.dart';
 
 import '../customvars.dart';
 import './color_constants.dart';
@@ -41,5 +42,6 @@ class LightTheme {
         fontWeight: FontWeight.bold,
       ),
     ),
+    inputDecorationTheme: TextFormFieldTheme.lightInputDecorationTheme,
   );
 }

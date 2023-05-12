@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:national_parks_app/src/locales/string_constants.dart';
+import 'package:national_parks_app/src/utils/asset_paths.dart';
 
 class LoginHeaderWidget extends StatelessWidget {
   const LoginHeaderWidget({Key? key}) : super(key: key);
@@ -10,11 +12,15 @@ class LoginHeaderWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Image(
-            image: const AssetImage('assets/png/welcome-page.png'),
-            height: size.height * 0.2),
-        Text('Welcome back', style: Theme.of(context).textTheme.displaySmall),
-        Text('nothing to see here yet',
+        Center(
+          child: Image(
+            image: const AssetImage(AssetPaths.yellowStoneLogo),
+            height: 200,
+          ),
+        ),
+        Text(CustomText.welcomePageTitle,
+            style: Theme.of(context).textTheme.displaySmall),
+        Text(CustomText.welcomePageSubText,
             style: Theme.of(context).textTheme.bodyLarge),
       ],
     );

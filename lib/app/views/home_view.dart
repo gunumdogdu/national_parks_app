@@ -11,9 +11,9 @@ import 'package:national_parks_app/app/views/visitor_center_view.dart';
 
 import 'package:national_parks_app/repositories/services/places_service.dart';
 
-import '../../src/widgets/custom_grid_item.dart';
-import '../../src/widgets/customloading.dart';
-import '../../src/widgets/modal_bottom_sheet_alerts.dart';
+import '../../src/common_widgets/custom_grid_item.dart';
+import '../../src/common_widgets/customloading.dart';
+import '../../src/common_widgets/bottom_sheets/modal_bottom_sheet_alerts.dart';
 
 class HomeView extends StatelessWidget {
   final controller = Get.put(PlacesServiceController());

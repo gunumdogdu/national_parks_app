@@ -7,7 +7,7 @@ import '../../../../locales/string_constants.dart';
 import '../../../../utils/asset_paths.dart';
 import '../../../../utils/customvars.dart';
 import '../../../../utils/paddings.dart';
-import '../../../../widgets/custom_main_button.dart';
+import '../../../../common_widgets/buttons/custom_main_button.dart';
 
 class WelcomePageView extends StatelessWidget {
   const WelcomePageView({super.key});
@@ -59,11 +59,11 @@ class WelcomePageView extends StatelessWidget {
                       ),
                     );
                   },
-                  text: 'Log In'),
+                  text: 'LOGIN'),
               const SizedBox(
-                height: CustomPaddings.paddingXSmallHor,
+                height: CustomPaddings.paddingSmallVer,
               ),
-              CustomMainButton(onPress: () {}, text: 'Sign Up'),
+              CustomMainButton(onPress: () {}, text: 'Sign Up'.toUpperCase()),
               const SizedBox(
                 height: CustomPaddings.paddingXSmallHor,
               ),
