@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:national_parks_app/src/features/authentication/screens/login/login_screen.dart';
+import 'package:national_parks_app/src/features/authentication/screens/signup/signup_screen.dart';
 import 'package:national_parks_app/src/utils/themes/color_constants.dart';
 
 import '../../../../locales/string_constants.dart';
@@ -63,7 +64,15 @@ class WelcomePageView extends StatelessWidget {
               const SizedBox(
                 height: CustomPaddings.paddingSmallVer,
               ),
-              CustomMainButton(onPress: () {}, text: 'Sign Up'.toUpperCase()),
+              CustomMainButton(
+                  onPress: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const SignupScreen(),
+                      ),
+                    );
+                  },
+                  text: 'Sign Up'.toUpperCase()),
               const SizedBox(
                 height: CustomPaddings.paddingXSmallHor,
               ),

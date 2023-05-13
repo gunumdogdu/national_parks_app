@@ -4,16 +4,16 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:national_parks_app/src/locales/string_constants.dart';
 import 'package:national_parks_app/src/utils/themes/color_constants.dart';
-import 'package:national_parks_app/app/controllers/bottom_navigation_controller.dart';
+import 'package:national_parks_app/src/features/core/controllers/bottom_navigation_controller.dart';
 import 'package:national_parks_app/src/utils/asset_paths.dart';
 import 'package:national_parks_app/src/utils/paddings.dart';
-import 'package:national_parks_app/app/views/visitor_center_view.dart';
+import 'package:national_parks_app/src/features/core/screens/visitor_center/visitor_center_view.dart';
 
 import 'package:national_parks_app/repositories/services/places_service.dart';
 
-import '../../src/common_widgets/custom_grid_item.dart';
-import '../../src/common_widgets/customloading.dart';
-import '../../src/common_widgets/bottom_sheets/modal_bottom_sheet_alerts.dart';
+import '../../../../common_widgets/custom_grid_item.dart';
+import '../../../../common_widgets/customloading.dart';
+import '../../../../common_widgets/bottom_sheets/modal_bottom_sheet_alerts.dart';
 
 class HomeView extends StatelessWidget {
   final controller = Get.put(PlacesServiceController());

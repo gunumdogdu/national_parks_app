@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:national_parks_app/src/locales/string_constants.dart';
 import 'package:national_parks_app/src/utils/asset_paths.dart';

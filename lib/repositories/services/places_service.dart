@@ -2,10 +2,10 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:get/get.dart';
-import 'package:national_parks_app/models/places/alerts_model.dart';
+import 'package:national_parks_app/src/features/core/models/alerts_model.dart';
 
-import '../../models/places/places_model.dart';
-import '../../secrets/secrets.dart';
+import '../../src/features/core/models/home/places_model.dart';
+import '../../src/secrets/secrets.dart';
 
 class PlacesServiceController extends GetxController {
   var isLoading = false.obs;

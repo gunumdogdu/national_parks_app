@@ -24,4 +24,7 @@ class CustomText {
   static const forgetPasswordText = 'Forget password';
   static const signupTitle = 'Get On Board';
   static const signupSubtitle = 'Create your profile to start discover';
+
+  // -- OTP SCREEN
+  static const otpText = 'Enter the verification code sent at ';
 }

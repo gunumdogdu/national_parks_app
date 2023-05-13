@@ -6,9 +6,9 @@ import 'package:national_parks_app/src/locales/string_constants.dart';
 import 'package:national_parks_app/src/utils/customvars.dart';
 import 'package:national_parks_app/src/utils/paddings.dart';
 
-import '../../src/utils/asset_paths.dart';
-import '../../src/common_widgets/buttons/custom_main_button.dart';
-import 'home_view.dart';
+import '../../../../utils/asset_paths.dart';
+import '../../../../common_widgets/buttons/custom_main_button.dart';
+import '../home/home_view.dart';
 
 class OnboardingView extends StatelessWidget {
   const OnboardingView({super.key});

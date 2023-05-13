@@ -44,6 +44,8 @@ dependencies:
   timezone: ^0.9.2
   # Utils
   flutter_native_splash: ^2.2.19
+  flutter_otp_text_field: ^1.1.1
+
 
 dev_dependencies:
   flutter_test:
@@ -67,6 +69,7 @@ flutter:
   # ASSETS
   assets:
     - assets/png/google-logo.png
+    - assets/png/confused.png
     - assets/png/apple-logo.png
     - assets/png/welcome-page.jpg
     - assets/png/yellowstonelogo.png

@@ -21,6 +21,7 @@ class SignupScreen extends StatelessWidget {
                 image: AssetPaths.yellowStoneLogo,
                 title: CustomText.signupTitle,
                 subtitle: CustomText.signupSubtitle,
+                heightBetween: 30.0,
               ),
               const SignupFormWidget(),
               Column(

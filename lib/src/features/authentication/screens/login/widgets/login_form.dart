@@ -3,7 +3,9 @@ import 'package:national_parks_app/src/locales/string_constants.dart';
 import 'package:national_parks_app/src/utils/paddings.dart';
 import 'package:national_parks_app/src/utils/themes/color_constants.dart';
 
-import '../../../../common_widgets/buttons/custom_main_button.dart';
+import '../../../../../common_widgets/buttons/custom_main_button.dart';
+import '../../forget_password/forget_password_options/forget_password_button_widget.dart';
+import '../../forget_password/forget_password_options/forget_password_modal_bottom_sheet.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm({
@@ -44,10 +46,13 @@ class LoginForm extends StatelessWidget {
               ),
             ),
             const SizedBox(height: CustomPaddings.paddingSmallVer),
+            // -- FORGET PASSWORD BUTTON
             Align(
               alignment: Alignment.centerRight,
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  ForgetPasswordScreen.buildShowModalBottomSheet(context);
+                },
                 child: const Text(
                   CustomText.forgetPasswordText,
                   style:

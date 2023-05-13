@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../models/places/visitor_centers_model.dart' as VCM;
+import '../../models/visitor_center/visitor_centers_model.dart' as VCM;
 
 class VisitorCenterDetailView extends StatelessWidget {
   VisitorCenterDetailView({

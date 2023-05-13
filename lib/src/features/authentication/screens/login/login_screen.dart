@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:national_parks_app/src/utils/paddings.dart';
 
-import 'login_footer.dart';
-import 'login_form.dart';
-import 'login_header.dart';
+import 'widgets/login_footer.dart';
+import 'widgets/login_form.dart';
+import 'widgets/login_header.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
